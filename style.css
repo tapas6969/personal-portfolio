@@ -1,0 +1,184 @@
+ /* Reset styles */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    line-height: 1.6;
+    padding-top: 100px; /* Adjusted to make space for the fixed navigation bar and profile picture */
+    padding-bottom: 50px; /* Added padding for the footer */
+    overflow-x: hidden; /* Hide horizontal overflow */
+}
+
+/* Style for the navigation bar */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    padding: 10px 0;
+    text-align: center;
+    z-index: 1000;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+/* Style for the profile picture */
+.profile-pic {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000; /* Ensure profile pic is above the navigation bar */
+    border-radius: 50%;
+    width: 90px; /* Adjusted size of profile picture */
+    height: 90px; /* Adjusted size of profile picture */
+    border: 2px solid #fff;
+    overflow: hidden;
+}
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Style for sections */
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+section h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+section p {
+    font-size: 18px;
+}
+
+/* Style for the footer */
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Hover effect for navigation links */
+nav a:hover {
+    color: #aaa;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Green color */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.btn:hover {
+    background-color: #444444da; /* Darker green color on hover */
+}
+.slideshow-container {
+    position: relative;
+    max-width: 300px; /* Adjust as needed */
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    flex: 0 0 100%;
+}
+
+.slide img {
+    border-radius: 35%;
+    width: 200px; /* Adjust as needed */
+    height: 200px; /* Adjust as needed */
+    object-fit: cover;
+}
+
+/* Navigation buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    z-index: 1;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+.contact-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.contact-links li {
+    display: inline-block;
+    margin: 0 10px;
+}
+.contact-links a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+.contact-links a:hover {
+    background-color: #555;
+}
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
+    .profile-pic {
+        top: 60px;
+        right: 10px;
+    }
+    section h1 {
+        font-size: 30px;
+    }
+    section p {
+        font-size: 16px;
+    }
+    .slideshow-container {
+        max-width: 250px; /* Adjusted max-width for smaller screens */
+    }
+    .slide img {
+        width: 150px; /* Adjusted width for smaller screens */
+        height: 150px; /* Adjusted height for smaller screens */
+    }
+    .contact-links li {
+        margin: 0 5px; /* Adjusted margin for smaller screens */
+    }
+    .contact-links a {
+        padding: 8px 15px; /* Adjusted padding for smaller screens */
+    }
+}
